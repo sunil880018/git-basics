@@ -1,0 +1,71 @@
+master -> default name of the local branch, can be changed
+origin -> default alias for the url of the remote repo, can be changed else have to type full url
+/remotes/origin/master -> master branch on remote repo with url's alias origin
+
+$ sudo apt-get install git
+
+$ git --version
+
+$ git config --global user.name "sunil"			//configure your github account name locally
+
+$ git config --global user.email "email_id@gmail.com"		//your email-id
+
+$ git config --help			// for any verb like help
+$ git help config 		
+
+
+->To track local repository remotely:-
+$ cd dir
+$ git init			//.git directory added
+$ rm -rf .git			//remove tracking repo
+$ git status			//untracked files -- not make others see these files 
+					//or, staged files -- files ready to be committed
+
+$ touch .gitignore	//create a gitignore file in which we put all files we want to ignore
+
+$ git add file_name or -A 	//add files to staging area
+
+$ git reset file_name 		//remove files from staging area to untracked files
+
+$ git reset 				//remove files from St to Un
+
+$ git commit -m "Message"		//files committed
+
+$ git log					//logs of waht we did recently
+
+$ git add remote origin Remote_Repo_URL		// Create a new repository and link it to local machine
+
+$ git remote -v			//info about remote repo linked
+
+$ git branch -a 			//list all branches locally and remotely
+
+$ git diff 				//show differences i made to the code
+
+$ git pull origin master	//pull changes from origin to master branch
+
+$ git push -u origin master		//-u remembers parameters, next time we can only use git push
+
+$ git branch branch_name			//create a branch named branch_name
+
+$ git checkout branch_name 		//go to that branch
+
+$ git push -u origin branch_name 	//push to remote repo changes in branch named branch_name or branch if it's not there
+
+$ git branch -a			// have branch_name locally and /remotes/origin/branch_name remotely ,
+						// i.e, whole branch pushed to remote repo
+
+$ git checkout master
+
+$ git branch --merged			// all branches merged till now
+
+$ git merge branch_name 		// merge with master
+
+$ git push origin master		//push master to remote repo
+
+$ git branch -d branch_name	//delete that branch
+
+$ git push origin --delete branch_name	//delete branch from remote repo
+
+
+->To track/clone other's repository and work on it:-
+	$ git clone <url> <where to clone>			// . means current directory
